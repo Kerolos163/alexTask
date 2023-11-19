@@ -1,3 +1,5 @@
+import 'package:alextask/feature/home/presentation/view/home_view.dart';
+
 import '../../../../../core/manager/asser_manager.dart';
 import '../../../../../core/manager/color_manager.dart';
 import '../../../../../core/my_device.dart';
@@ -32,7 +34,14 @@ class LoginForm extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              const CustomButton(txt: "تسجيل دخول"),
+              CustomButton(
+                txt: "تسجيل دخول",
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const HomeView(),
+                  ));
+                },
+              ),
               SizedBox(height: MyDevice.getHeigh(context) / 24),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -91,7 +100,7 @@ class LoginForm extends StatelessWidget {
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: ColorManager.lightGrey, width: 1.5)),
+              border: Border.all(color: ColorManager.gray, width: 1.5)),
           child: LayoutBuilder(
             builder: (context, constraints) {
               var width = constraints.maxWidth;
