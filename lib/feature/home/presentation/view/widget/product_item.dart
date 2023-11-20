@@ -1,5 +1,6 @@
 import 'package:alextask/core/manager/asser_manager.dart';
 import 'package:alextask/core/manager/color_manager.dart';
+import 'package:alextask/feature/Description/presenation/view/description_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -50,9 +51,13 @@ class ProductItem extends StatelessWidget {
                       textDirection: TextDirection.ltr,
                     ),
                     const Spacer(),
-                    deskcriptionContainer(onTap: () {
-                      
-                    },),
+                    deskcriptionContainer(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const DescriptionView(),
+                        ));
+                      },
+                    ),
                     const SizedBox(
                       width: 8,
                     ),
@@ -74,7 +79,7 @@ class ProductItem extends StatelessWidget {
     );
   }
 
-  GestureDetector deskcriptionContainer({ void Function()? onTap}) {
+  GestureDetector deskcriptionContainer({void Function()? onTap}) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
