@@ -1,5 +1,5 @@
-import 'package:alextask/core/manager/asser_manager.dart';
-import 'package:alextask/core/manager/color_manager.dart';
+import '../../../../../core/manager/asser_manager.dart';
+import '../../../../../core/manager/color_manager.dart';
 import 'package:flutter/material.dart';
 
 class UserInfo extends StatelessWidget {

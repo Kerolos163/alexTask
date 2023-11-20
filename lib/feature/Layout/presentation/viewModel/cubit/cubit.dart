@@ -1,5 +1,5 @@
-import 'package:alextask/core/manager/asser_manager.dart';
-import 'package:alextask/feature/Layout/presentation/viewModel/cubit/state.dart';
+import '../../../../../core/manager/asser_manager.dart';
+import 'state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LayOutcubit extends Cubit<LayOutState> {

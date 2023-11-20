@@ -1,7 +1,7 @@
-import 'package:alextask/core/manager/asser_manager.dart';
-import 'package:alextask/core/manager/color_manager.dart';
-import 'package:alextask/core/my_device.dart';
-import 'package:alextask/feature/Description/presenation/view/description_view.dart';
+import '../../../../../core/manager/asser_manager.dart';
+import '../../../../../core/manager/color_manager.dart';
+import '../../../../../core/my_device.dart';
+import '../../../../Description/presenation/view/description_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

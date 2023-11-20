@@ -1,11 +1,11 @@
-import 'package:alextask/core/my_device.dart';
-import 'package:alextask/feature/home/presentation/view/widget/filteres_item.dart';
-import 'package:alextask/feature/home/presentation/view/widget/product_item.dart';
-import 'package:alextask/feature/home/presentation/viewModel/cubit/state.dart';
+import '../../../../../core/my_device.dart';
+import 'filteres_item.dart';
+import 'product_item.dart';
+import '../../viewModel/cubit/state.dart';
 import 'package:flutter/material.dart';
 
-import 'package:alextask/core/manager/color_manager.dart';
-import 'package:alextask/feature/home/presentation/viewModel/cubit/cubit.dart';
+import '../../../../../core/manager/color_manager.dart';
+import '../../viewModel/cubit/cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeBody extends StatelessWidget {

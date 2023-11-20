@@ -1,8 +1,8 @@
-import 'package:alextask/core/manager/asser_manager.dart';
-import 'package:alextask/core/manager/color_manager.dart';
-import 'package:alextask/feature/Description/presenation/view/widget/bottom_sheet_body.dart';
-import 'package:alextask/feature/Description/presenation/viewModel/Cubit/cubit.dart';
-import 'package:alextask/feature/Description/presenation/viewModel/Cubit/state.dart';
+import '../../../../core/manager/asser_manager.dart';
+import '../../../../core/manager/color_manager.dart';
+import 'widget/bottom_sheet_body.dart';
+import '../viewModel/Cubit/cubit.dart';
+import '../viewModel/Cubit/state.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

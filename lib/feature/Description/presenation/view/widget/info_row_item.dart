@@ -1,6 +1,7 @@
-import 'package:alextask/core/manager/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
+import '../../../../../core/manager/color_manager.dart';
 
 class InfoRowItem extends StatelessWidget {
   const InfoRowItem(

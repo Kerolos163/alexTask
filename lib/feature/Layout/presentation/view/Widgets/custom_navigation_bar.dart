@@ -1,10 +1,11 @@
-import 'package:alextask/core/manager/asser_manager.dart';
-import 'package:alextask/core/manager/color_manager.dart';
-import 'package:alextask/feature/Layout/presentation/view/Widgets/custom_navigation_bar_item.dart';
-import 'package:alextask/feature/Layout/presentation/viewModel/cubit/cubit.dart';
-import 'package:alextask/feature/Layout/presentation/viewModel/cubit/state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../../core/manager/asser_manager.dart';
+import '../../../../../core/manager/color_manager.dart';
+import '../../viewModel/cubit/cubit.dart';
+import '../../viewModel/cubit/state.dart';
+import 'custom_navigation_bar_item.dart';
 
 class CustomNavigationBar extends StatelessWidget {
   const CustomNavigationBar({super.key});

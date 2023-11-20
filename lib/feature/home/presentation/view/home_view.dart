@@ -1,6 +1,6 @@
-import 'package:alextask/feature/home/presentation/view/widget/home_body.dart';
-import 'package:alextask/feature/home/presentation/viewModel/cubit/cubit.dart';
-import 'package:alextask/feature/home/presentation/viewModel/cubit/state.dart';
+import 'widget/home_body.dart';
+import '../viewModel/cubit/cubit.dart';
+import '../viewModel/cubit/state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

@@ -1,4 +1,4 @@
-import 'package:alextask/feature/Description/presenation/view/widget/location_widget.dart';
+import 'location_widget.dart';
 import 'package:flutter/material.dart';
 
 class FromToLocationWidget extends StatelessWidget {

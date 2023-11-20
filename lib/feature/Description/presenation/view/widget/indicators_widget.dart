@@ -1,5 +1,5 @@
-import 'package:alextask/core/manager/color_manager.dart';
-import 'package:alextask/feature/Description/presenation/viewModel/Cubit/cubit.dart';
+import '../../../../../core/manager/color_manager.dart';
+import '../../viewModel/Cubit/cubit.dart';
 import 'package:flutter/material.dart';
 
 class IndicatorsWidget extends StatelessWidget {

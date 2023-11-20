@@ -1,6 +1,7 @@
-import 'package:alextask/core/manager/color_manager.dart';
-import 'package:alextask/feature/home/presentation/viewModel/cubit/cubit.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../core/manager/color_manager.dart';
+import '../../viewModel/cubit/cubit.dart';
 
 class FilteredItem extends StatelessWidget {
   const FilteredItem({

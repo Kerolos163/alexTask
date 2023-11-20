@@ -1,13 +1,13 @@
-import 'package:alextask/core/manager/asser_manager.dart';
-import 'package:alextask/core/manager/color_manager.dart';
-import 'package:alextask/core/my_device.dart';
-import 'package:alextask/feature/Description/presenation/view/widget/from_to_location_widget.dart';
-import 'package:alextask/feature/Description/presenation/view/widget/from_to_time_widget.dart';
-import 'package:alextask/feature/Description/presenation/view/widget/indicators_widget.dart';
-import 'package:alextask/feature/Description/presenation/view/widget/info_row_item.dart';
-import 'package:alextask/feature/Description/presenation/view/widget/user_info.dart';
-import 'package:alextask/feature/Description/presenation/viewModel/Cubit/cubit.dart';
-import 'package:alextask/feature/Description/presenation/viewModel/Cubit/state.dart';
+import '../../../../../core/manager/asser_manager.dart';
+import '../../../../../core/manager/color_manager.dart';
+import '../../../../../core/my_device.dart';
+import 'from_to_location_widget.dart';
+import 'from_to_time_widget.dart';
+import 'indicators_widget.dart';
+import 'info_row_item.dart';
+import 'user_info.dart';
+import '../../viewModel/Cubit/cubit.dart';
+import '../../viewModel/Cubit/state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

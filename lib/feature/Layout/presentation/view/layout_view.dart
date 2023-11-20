@@ -1,6 +1,8 @@
-import 'package:alextask/feature/Layout/presentation/view/Widgets/custom_navigation_bar.dart';
-import 'package:alextask/feature/Layout/presentation/viewModel/cubit/cubit.dart';
-import 'package:alextask/feature/home/presentation/view/home_view.dart';
+import '../../../../core/manager/asser_manager.dart';
+import 'Widgets/custom_navigation_bar.dart';
+import '../viewModel/cubit/cubit.dart';
+import '../viewModel/cubit/state.dart';
+import '../../../home/presentation/view/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -11,12 +13,18 @@ class LayOutView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => LayOutcubit(),
-      child: const Scaffold(
-        body: HomeView(),
-        bottomSheet: Directionality(
-          textDirection: TextDirection.rtl,
-          child: CustomNavigationBar(),
-        ),
+      child: BlocBuilder<LayOutcubit, LayOutState>(
+        builder: (context, state) {
+          return Scaffold(
+            body: LayOutcubit.get(context).selectedView == AssetManager.homeSVG
+                ? const HomeView()
+                : Container(),
+            bottomSheet: const Directionality(
+              textDirection: TextDirection.rtl,
+              child: CustomNavigationBar(),
+            ),
+          );
+        },
       ),
     );
   }

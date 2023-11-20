@@ -1,8 +1,8 @@
 
-import 'package:alextask/feature/Description/presenation/view/info_buttom_sheet.dart';
-import 'package:alextask/feature/Description/presenation/view/widget/description_body.dart';
-import 'package:alextask/feature/Description/presenation/viewModel/Cubit/cubit.dart';
-import 'package:alextask/feature/Description/presenation/viewModel/Cubit/state.dart';
+import 'info_buttom_sheet.dart';
+import 'widget/description_body.dart';
+import '../viewModel/Cubit/cubit.dart';
+import '../viewModel/Cubit/state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
