@@ -1,4 +1,4 @@
-import 'package:alextask/feature/home/presentation/view/home_view.dart';
+import 'package:alextask/feature/Layout/presentation/view/layout_view.dart';
 
 import '../../../../../core/manager/asser_manager.dart';
 import '../../../../../core/manager/color_manager.dart';
@@ -38,7 +38,7 @@ class LoginForm extends StatelessWidget {
                 txt: "تسجيل دخول",
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const HomeView(),
+                    builder: (context) => const LayOutView(),
                   ));
                 },
               ),
