@@ -28,7 +28,7 @@ class FilteredItem extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                 )
               : const BoxDecoration(
-                  color: ColorManager.gray,
+                  color: ColorManager.lightGray,
                 ),
           child: Text(txt, style: const TextStyle(fontSize: 14)),
         ),
