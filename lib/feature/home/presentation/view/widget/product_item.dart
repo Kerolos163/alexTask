@@ -98,7 +98,7 @@ class ProductItem extends StatelessWidget {
 
   Row infoWithImageRow(double width, double height) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 20),
@@ -112,7 +112,7 @@ class ProductItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(right: 12),
+              padding: const EdgeInsets.only(right: 6),
               child: Text(
                 "ابو فهد عبد العزيز",
                 style: TextStyle(
@@ -121,7 +121,7 @@ class ProductItem extends StatelessWidget {
             ),
             Expanded(
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   fromToWithDashLineWidget(height),
                   fromToWidget(width)
@@ -150,13 +150,13 @@ class ProductItem extends StatelessWidget {
 
   Padding fromToWithDashLineWidget(double height) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 5),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: Column(children: [
         CircleAvatar(
           radius: height / 24,
           backgroundColor: ColorManager.lightGray,
         ),
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 3; i++)
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 2.1),
@@ -176,17 +176,17 @@ class ProductItem extends StatelessWidget {
 
   Padding fromToWidget(double width) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 18),
+      padding: const EdgeInsets.symmetric(vertical: 12,horizontal: 2),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text(
           "1097 Daju Ridge",
-          style: TextStyle(color: ColorManager.gray, fontSize: width / 24),
+          style: TextStyle(color: ColorManager.gray, fontSize: width / 26),
           textDirection: TextDirection.ltr,
         ),
         const Spacer(),
         Text(
           "1283 Cunema Extension",
-          style: TextStyle(color: ColorManager.gray, fontSize: width / 24),
+          style: TextStyle(color: ColorManager.gray, fontSize: width / 26),
           textDirection: TextDirection.ltr,
         ),
       ]),
