@@ -1,5 +1,6 @@
 import 'package:alextask/core/manager/asser_manager.dart';
 import 'package:alextask/core/manager/color_manager.dart';
+import 'package:alextask/core/my_device.dart';
 import 'package:alextask/feature/Description/presenation/view/widget/from_to_location_widget.dart';
 import 'package:alextask/feature/Description/presenation/view/widget/from_to_time_widget.dart';
 import 'package:alextask/feature/Description/presenation/view/widget/indicators_widget.dart';
@@ -88,7 +89,12 @@ class DescriptionBody extends StatelessWidget {
                 const Text(
                   "اريد توصيل شحنة خشب الي ميناء جدة  وزن الشحنة 100 طن …",
                   style: TextStyle(color: ColorManager.gray2, fontSize: 14),
-                )
+                  textAlign: TextAlign.start,
+                ),
+                SizedBox(
+                    height: DescriptionCubit.get(context).isOpen
+                        ? MyDevice.getHeigh(context) / 8
+                        : MyDevice.getHeigh(context) / 30)
               ],
             ),
           ),

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:alextask/core/manager/asser_manager.dart';
 import 'package:alextask/feature/Description/presenation/viewModel/Cubit/state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -15,5 +17,12 @@ class DescriptionCubit extends Cubit<DescriptionState> {
   changeCurrentIndex({required int newIndex}) {
     currentindex = newIndex;
     emit(ChangeIndexState());
+  }
+
+  bool isOpen = false;
+  changeBottomSheet() {
+    isOpen = !isOpen;
+    log(isOpen.toString());
+    emit(ChangeHeightBottomSheetState());
   }
 }
