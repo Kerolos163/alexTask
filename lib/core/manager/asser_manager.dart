@@ -6,4 +6,8 @@ abstract class AssetManager {
   static const String calendar = "asset/images/calendar.svg";
   static const String close = "asset/images/close.svg";
   static const String hulk = "asset/images/hulk.jpg";
+  static const String location = "asset/images/locationIcon.svg";
+  static const String blueCalendar = "asset/images/blueCalendar.svg";
+  static const String boxSVG = "asset/images/SvgBox.svg";
+  static const String truckSVG = "asset/images/truck.svg";
 }

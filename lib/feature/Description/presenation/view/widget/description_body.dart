@@ -1,5 +1,9 @@
 import 'package:alextask/core/manager/asser_manager.dart';
+import 'package:alextask/core/manager/color_manager.dart';
+import 'package:alextask/feature/Description/presenation/view/widget/from_to_location_widget.dart';
+import 'package:alextask/feature/Description/presenation/view/widget/from_to_time_widget.dart';
 import 'package:alextask/feature/Description/presenation/view/widget/indicators_widget.dart';
+import 'package:alextask/feature/Description/presenation/view/widget/info_row_item.dart';
 import 'package:alextask/feature/Description/presenation/view/widget/user_info.dart';
 import 'package:alextask/feature/Description/presenation/viewModel/Cubit/cubit.dart';
 import 'package:alextask/feature/Description/presenation/viewModel/Cubit/state.dart';
@@ -15,33 +19,88 @@ class DescriptionBody extends StatelessWidget {
       builder: (context, state) {
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 28),
-          child: Column(
-            children: [
-              const SizedBox(height: 16),
-              SizedBox(
-                height: 180,
-                child: PageView.builder(
-                  itemBuilder: (context, index) => ClipRRect(
-                    borderRadius: BorderRadius.circular(12),
-                    child: Image.asset(AssetManager.box, fit: BoxFit.fitWidth),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const SizedBox(height: 16),
+                SizedBox(
+                  height: 180,
+                  child: PageView.builder(
+                    itemBuilder: (context, index) => ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child:
+                          Image.asset(AssetManager.box, fit: BoxFit.fitWidth),
+                    ),
+                    onPageChanged: (value) {
+                      DescriptionCubit.get(context)
+                          .changeCurrentIndex(newIndex: value);
+                    },
+                    itemCount: DescriptionCubit.get(context).imgs.length,
                   ),
-                  onPageChanged: (value) {
-                    DescriptionCubit.get(context)
-                        .changeCurrentIndex(newIndex: value);
-                  },
-                  itemCount: DescriptionCubit.get(context).imgs.length,
                 ),
-              ),
-              const SizedBox(height: 10),
-              IndicatorsWidget(
-                currentIndex: DescriptionCubit.get(context).currentindex,
-              ),
-              const SizedBox(height: 12),
-              const UserInfo()
-            ],
+                const SizedBox(height: 10),
+                IndicatorsWidget(
+                  currentIndex: DescriptionCubit.get(context).currentindex,
+                ),
+                const SizedBox(height: 12),
+                const UserInfo(),
+                const SizedBox(height: 18),
+                const FromToLocationWidget(
+                  title1: "موقع التحميل",
+                  txt1: "1097 Daju Ridge",
+                  title2: "موقع التنزيل",
+                  txt2: "1097 Daju Ridge",
+                ),
+                myDivider(),
+                const FromToTimeWidget(
+                  title1: "وقت التحميل",
+                  date1: "04 Jul 2021",
+                  time1: "12:12PM",
+                  title2: "وقت التسليم",
+                  date2: "04 Jul 2021",
+                  time2: "11:48AM",
+                ),
+                myDivider(),
+                const InfoRowItem(
+                  txt1: "وزن الشحنة",
+                  txt2: "100 طن",
+                  img: AssetManager.boxSVG,
+                ),
+                myDivider(),
+                const InfoRowItem(
+                  txt1: "عدد الحاويات ",
+                  txt2: "60 صندوق",
+                  img: AssetManager.boxSVG,
+                ),
+                myDivider(),
+                const InfoRowItem(
+                  txt1: "عدد المركبات ",
+                  txt2: "40 شاحنة",
+                  img: AssetManager.truckSVG,
+                ),
+                myDivider(),
+                const InfoRowItem(
+                  txt1: "نوع المركبات",
+                  txt2: "دينا - دينا بطحاء",
+                  img: AssetManager.truckSVG,
+                ),
+                myDivider(),
+                const Text(
+                  "اريد توصيل شحنة خشب الي ميناء جدة  وزن الشحنة 100 طن …",
+                  style: TextStyle(color: ColorManager.gray2, fontSize: 14),
+                )
+              ],
+            ),
           ),
         );
       },
+    );
+  }
+
+  myDivider() {
+    return const Padding(
+      padding: EdgeInsets.only(top: 26),
+      child: Divider(height: 30, color: ColorManager.gray),
     );
   }
 }
