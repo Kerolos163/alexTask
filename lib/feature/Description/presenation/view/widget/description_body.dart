@@ -93,8 +93,11 @@ class DescriptionBody extends StatelessWidget {
                 ),
                 SizedBox(
                     height: DescriptionCubit.get(context).isOpen
-                        ? MyDevice.getHeigh(context) / 8
-                        : MyDevice.getHeigh(context) / 30)
+                        ? MyDevice.getHeigh(context) <
+                                750 //to handle Problem in small Device
+                            ? MyDevice.getHeigh(context) / 3.3
+                            : MyDevice.getHeigh(context) / 4
+                        : MyDevice.getHeigh(context) / 25)
               ],
             ),
           ),

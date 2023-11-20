@@ -11,4 +11,6 @@ abstract class AssetManager {
   static const String boxSVG = "asset/images/SvgBox.svg";
   static const String truckSVG = "asset/images/truck.svg";
   static const String arrowSVG = "asset/images/arrow.svg";
+  static const String offerSVG = "asset/images/offer.svg";
+  static const String correctSVG = "asset/images/correct.svg";
 }

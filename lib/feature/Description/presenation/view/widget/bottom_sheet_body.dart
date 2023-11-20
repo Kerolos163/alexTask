@@ -1,5 +1,7 @@
+import 'package:alextask/core/manager/asser_manager.dart';
 import 'package:alextask/core/manager/color_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class BottomSheetBody extends StatelessWidget {
   const BottomSheetBody({
@@ -8,14 +10,15 @@ class BottomSheetBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        SizedBox(height: 13),
-        Align(
+        const SizedBox(height: 13),
+        const Align(
           alignment: Alignment.centerRight,
           child: Text("تحديد السعر بين العميل والسائق"),
         ),
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Text(
@@ -27,6 +30,39 @@ class BottomSheetBody extends StatelessWidget {
             Text("السعر الحالي"),
           ],
         ),
+        const SizedBox(height: 16),
+        bottomSheetItemsRow()
+      ],
+    );
+  }
+
+  Row bottomSheetItemsRow() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        bottomSheetItem(img: AssetManager.close, txt: "رفض"),
+        bottomSheetItem(img: AssetManager.correctSVG, txt: "موافقة"),
+        bottomSheetItem(img: AssetManager.offerSVG, txt: "قدم عرض"),
+      ],
+    );
+  }
+
+  Column bottomSheetItem({required String img, required String txt}) {
+    return Column(
+      children: [
+        Container(
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: ColorManager.lightGray),
+          ),
+          child: SvgPicture.asset(img),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          txt,
+          style: const TextStyle(fontSize: 14, color: ColorManager.darkBlue),
+        )
       ],
     );
   }
