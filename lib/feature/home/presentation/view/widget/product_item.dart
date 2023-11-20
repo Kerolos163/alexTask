@@ -1,5 +1,6 @@
 import 'package:alextask/core/manager/asser_manager.dart';
 import 'package:alextask/core/manager/color_manager.dart';
+import 'package:alextask/core/my_device.dart';
 import 'package:alextask/feature/Description/presenation/view/description_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -14,7 +15,7 @@ class ProductItem extends StatelessWidget {
       shadowColor: ColorManager.darkGray,
       borderRadius: BorderRadius.circular(8),
       child: Container(
-        height: 200,
+        height:MyDevice.getHeigh(context)<750? MyDevice.getHeigh(context)/3.5:MyDevice.getHeigh(context)/4.3,
         width: double.infinity,
         padding: const EdgeInsets.all(5),
         decoration: BoxDecoration(
@@ -156,7 +157,7 @@ class ProductItem extends StatelessWidget {
           radius: height / 24,
           backgroundColor: ColorManager.lightGray,
         ),
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 4; i++)
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 2.1),
